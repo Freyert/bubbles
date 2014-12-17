@@ -1,0 +1,19 @@
+{
+  "name": "bubbles",
+  "version": "0.0.0",
+  "description": "A demo using Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fulton Byrne",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "wiredep": "^2.2.2"
+  }
+}
