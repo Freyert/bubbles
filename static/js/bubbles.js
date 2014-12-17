@@ -11,6 +11,13 @@ window.onload = function() {
 		radius: radius,
 		fillColor: '#'+Math.floor(Math.random()*16777215).toString(16)//http://www.paulirish.com/2009/random-hex-color-code-snippets/
 	});
+	var canvasTitle = new PointText({
+		point: view.center,
+		justification: 'center',
+		fontSize: 150,
+		fillColor: 'black',
+		content: "Bubbles."
+	});
 
 	var socket = io();
 	socket.on('connect', function(playerTable) {
