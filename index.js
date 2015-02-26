@@ -13,9 +13,11 @@ app.get('/', function(req, res) {
 
 io.on('connection', function(socket) {
 	console.log(socket.id + ' user connected');
+	//Initialize a Player's Field
 	socket.join('init');
 	io.to('init').emit('init field', playerTable);
 	socket.leave('init');
+
 	socket.on('player join', function(player) {
 		playerTable[socket.id] = { x: player.x, y: player.y, color: player.color};
 		socket.broadcast.emit('player join', {

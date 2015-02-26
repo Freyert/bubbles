@@ -19,6 +19,7 @@ window.onload = function() {
 		content: "Bubbles."
 	});
 
+
 	var socket = io();
 	socket.on('connect', function(playerTable) {
 		socket.emit('player join', {
@@ -54,6 +55,7 @@ window.onload = function() {
 	socket.on('player left', function(playerId) {
 		companions[playerId].remove();
 		delete companions[playerId];
+		view.update();
 	});
 
 	socket.on('player move', function(player) {
